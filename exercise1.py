@@ -23,7 +23,7 @@ class TestTemplate(unittest.TestCase):
         self.driver.quit()
 
     def test_case_1(self):
-        """Find and click top-left logo button"""
+        """Find and assert text under shadow-root"""
         try:
             self.driver.get(self.target)
             shadow_host = self.driver.find_element(By.CSS_SELECTOR, '#site-info')
