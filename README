@@ -1,0 +1,17 @@
+This is a template automation project with Python and Selenium.
+
+There are 2 options to run the project.
+1. MacBook M1
+_ Install python3.
+_ Install ChromeDriver and Chrome.
+_ Go to project and run: pip3 install -r requirements
+_ Run tests: pytest exercise1.py
+ 
+2. Non MacBook M1
+_ Install Docker.
+_ Run: docker build -t python-poc .
+_ Run: docker run -it -w /app -v $(pwd):/app python-poc:latest bash
+_ Run: pytest exercise1.py
+
+Now you can continue working on the project.
+
