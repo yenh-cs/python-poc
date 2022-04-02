@@ -4,7 +4,7 @@ from selenium.common.exceptions import NoSuchElementException
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 
-class TestTemplate(unittest.TestCase):
+class Exercise1(unittest.TestCase):
     def setUp(self):
         self.target = "http://main.ctqatest.info/test.php"
         
@@ -22,7 +22,7 @@ class TestTemplate(unittest.TestCase):
         """Stop web driver"""
         self.driver.quit()
 
-    def test_case_1(self):
+    def test_text_unde_shadow_root(self):
         """Find and assert text under shadow-root"""
         try:
             self.driver.get(self.target)
@@ -34,12 +34,14 @@ class TestTemplate(unittest.TestCase):
             self.fail(ex.msg)
 
     
-    #Use the website http://main.ctqatest.info/test.php  and perform the following tasks.
-    #Go to the login page and enter the username as test@test.com and password as ThisIs@T3st. Check if there is an error displayed.
     def test_login(self):
+        """ 
+            Use the website http://main.ctqatest.info/test.php  and perform the following tasks.
+            Go to the login page and enter the username as test@test.com and password as ThisIs@T3st. Check if there is an error displayed.
+        """ 
         return None
 
 
 if __name__ == '__main__':
-    suite = unittest.TestLoader().loadTestsFromTestCase(TestTemplate)
+    suite = unittest.TestLoader().loadTestsFromTestCase(Exercise1)
     unittest.TextTestRunner(verbosity=2).run(suite)
